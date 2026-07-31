@@ -14,9 +14,9 @@ class Sequence < Formula
   depends_on macos: :sequoia
 
   def install
-    bin.install "package/sq"
-    libexec.install "package/libexec/ffprobe"
-    pkgshare.install "package/share/sequence/licenses"
+    bin.install "sq"
+    libexec.install "libexec/ffprobe"
+    pkgshare.install "share/sequence/licenses"
   end
 
   test do
