@@ -5,9 +5,9 @@
 class Sequence < Formula
   desc "Command-line interface for Sequence media workflows"
   homepage "https://sequencetool.com/docs/cli"
-  url "https://github.com/rockstarsunlimited/sequencetool/releases/download/sq-v1.0.0/sq-macos-arm64.zip"
-  version "1.0.0"
-  sha256 "d11ffa273a42c84c73a72b5a11210c5d186eb04d89c18135fe5737f7056a15e2"
+  url "https://github.com/rockstarsunlimited/sequencetool/releases/download/sq-v1.0.1/sq-macos-arm64.zip"
+  version "1.0.1"
+  sha256 "511cb4247bf12970fdc97f08650ab68f9b2d54808dd2cb00fa5d28a7e455fedf"
   license "LicenseRef-Sequence-Proprietary"
 
   depends_on arch: :arm64
@@ -20,7 +20,7 @@ class Sequence < Formula
   end
 
   test do
-    assert_match "sq 1.0.0", shell_output("#{bin}/sq --version")
+    assert_match "sq 1.0.1", shell_output("#{bin}/sq --version")
     assert_match "action catalog ABI: v1", shell_output("#{bin}/sq doctor")
   end
 end
