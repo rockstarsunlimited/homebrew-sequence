@@ -5,9 +5,9 @@
 class Sequence < Formula
   desc "Command-line interface for Sequence media workflows"
   homepage "https://sequencetool.com/docs/cli"
-  url "https://github.com/rockstarsunlimited/sequencetool/releases/download/cli-v1.1.2/sq-macos-arm64.zip"
-  version "1.1.2"
-  sha256 "df1f5ecec0ec5f0a8128ca4b1a2c0e5bfc4dee24f61f13591e231a3f52fb21b4"
+  url "https://github.com/rockstarsunlimited/sequencetool/releases/download/cli-v1.1.4/sq-macos-arm64.zip"
+  version "1.1.4"
+  sha256 "242534a335ec1b8b88b3e6dd7a5d2d10850b5a493ed247b097d330fcdec52317"
   license "LicenseRef-Sequence-Proprietary"
 
   depends_on arch: :arm64
@@ -21,7 +21,7 @@ class Sequence < Formula
   end
 
   test do
-    assert_match "sq 1.1.2", shell_output("#{bin}/sq --version")
+    assert_match "sq 1.1.4", shell_output("#{bin}/sq --version")
     assert_match "project.list", shell_output("#{bin}/sq actions list")
   end
 end
